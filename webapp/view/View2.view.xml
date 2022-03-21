@@ -1,0 +1,36 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tab="sap.ui.table" controllerName="Demo.controller.View2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<tab:Table id="table" rows="{/PersonalInfo}">
+						<tab:columns>
+							<tab:Column width="11rem">
+								<Label text="First Name"/>
+								<tab:template>
+									<Input type="Text" id="input1" value="{First Name}"/>
+								</tab:template>
+							</tab:Column>
+							<tab:Column width="11rem">
+								<Label text="Last Name"/>
+								<tab:template>
+									<Input type="Text" id="input2" value="{Last Name}"/>
+								</tab:template>
+							</tab:Column>
+						</tab:columns>
+					</tab:Table>
+				</content>
+				<footer>
+					<Toolbar>
+						<content>
+							<ToolbarSpacer/>
+							<Button text="save" press="onSave"/>
+							<Button type="Accept" icon="sap-icon://excel-attachment" text="Download Excel" press="OnExport"/>
+						</content>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
